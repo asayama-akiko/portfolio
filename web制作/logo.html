@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKIKO ASAYAMA</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        var pagetop = $("#page-top");
+        pagetop.hide();
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            pagetop.fadeIn();
+          } else {
+            pagetop.fadeOut();
+          }
+        });
+        pagetop.click(function () {
+          $("body, html").animate(
+            {
+              scrollTop: 0,
+            },
+            500
+          );
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img src="img/logo.png" alt="ロゴ" />
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav_lists">
+          <li class="nav_list"><a href="index.html#about">About</a></li>
+          <li class="nav_list">
+            <a href="#">
+              Works
+              <ul class="dropdown_lists">
+                <li class="dropdown_list">
+                  <a href="website.html">Website</a>
+                </li>
+                <li class="dropdown_list"><a href="banner.html">Banner</a></li>
+                <li class="dropdown_list"><a href="logo.html">Logo</a></li>
+                <li class="dropdown_list"><a href="fonts.html">Fonts</a></li>
+                <li class="dropdown_list"><a href="flyer.html">Flyer</a></li>
+              </ul>
+            </a>
+          </li>
+          <li class="nav_list"><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="sub_visual">
+        <h2>Works<span>Logo</span></h2>
+      </div>
+
+      <section class="logo">
+        <div class="container">
+          <div class="logo_image">
+            <div class="balloon_top">
+              <div class="balloon"><span></span>1</div>
+            </div>
+            <div class="balloon_left">
+              <div class="balloon"><span class="triangle_r"></span>2</div>
+            </div>
+            <div class="balloon_right">
+              <div class="balloon"><span class="triangle_l"></span>3</div>
+            </div>
+            <img src="img/name_logo.png" alt="ネームロゴ" />
+          </div>
+          <h3>ネームロゴ</h3>
+          <p>制作時間:企画1時間、デザイン3時間</p>
+          <ol>
+            <li class="num_01">イェロー＝希望・幸福、昇る朝日のイメージ</li>
+            <li class="num_02">
+              レッドオレンジ＝明るさ・元気、小さな山のイメージ（明子）
+            </li>
+            <li class="num_03">
+              ライトグリーン＝爽やかさ、大きな山のイメージ（朝山）
+            </li>
+          </ol>
+          <p>
+            2つの「A」からなる山に朝日が昇るイメージを図形化しました。
+            小さい方のAは名前の明子から連想される「明るい・元気」なイメージ、大きい方のAは苗字の朝山から連想される「爽やか」なイメージを考慮してこのような配色としました。
+          </p>
+        </div>
+      </section>
+
+      <section class="logo">
+        <div class="container">
+          <div class="logo_image">
+            <div class="balloon_top" id="asayama_logo">
+              <div class="balloon"><span></span>1</div>
+            </div>
+            <div class="balloon_right">
+              <div class="balloon"><span class="triangle_l"></span>2</div>
+            </div>
+            <img src="img/asayama_logo.png" alt="アサヤマホームのロゴ" />
+          </div>
+          <h3>アサヤマホームのロゴ</h3>
+          <p>制作時間:企画1時間、デザイン5時間</p>
+          <ol>
+            <li class="num_01">オレンジ＝喜び・幸福、昇る朝日をイメージ</li>
+            <li class="num_02">
+              ライトグリーン＝安心・安全・癒し、住宅業界でそびえる山のイメージ
+            </li>
+          </ol>
+          <p>
+            朝山という文字から連想する「朝日が昇る山」をイメージし、図形化した。
+            「100年先も夢と暮らそう」というアサヤマホームの経営理念に沿うデザインを考えた結果、asayamaの4つのaを山の形に変換し、影を付けた後、角を丸くした。
+          </p>
+        </div>
+      </section>
+
+      <section class="logo">
+        <div class="container">
+          <div class="logo_image">
+            <div class="balloon_top" id="joybeads_logo_01">
+              <div class="balloon"><span></span>1</div>
+            </div>
+            <div class="balloon_bottom">
+              <div class="balloon"><span class="triangle_t"></span>2</div>
+            </div>
+            <div class="balloon_bottom" id="joybeads_logo_03">
+              <div class="balloon"><span class="triangle_t"></span>3</div>
+            </div>
+            <img src="img/joybeads.png" alt="JoyBeadsのロゴ" />
+          </div>
+          <h3 id="joybeads_logo">JoyBeadsのロゴ</h3>
+          <p>制作時間:企画1時間、デザイン5時間</p>
+          <ol>
+            <li class="num_01">
+              英語の読めない小さなお子さんのためにカタカナ表記としました。
+            </li>
+            <li class="num_02">
+              手描きの顔文字とすることで楽しい雰囲気を伝えたかったです。
+            </li>
+            <li class="num_03">
+              統一感を出すため、aの縦棒を伸ばして変形させたものがdとなりました。
+            </li>
+          </ol>
+          <p>
+            「楽しいビーズ」の意味を持つジョイビーズという、架空のアイロンビーズを考えました。<br />
+            フォントはFUTURAをベースにトレースした後、縦横比を変え、角を丸めました。<br />
+            1つおきに文字を左右に傾けて、アイロンビーズビーズのコロコロ感を出しました。<br />
+            小さなお子さんが好きそうなビビットカラーを採用し、赤・オレン・緑・青と順に置くことでアイロンビーズの色数の多さを表現しました。
+          </p>
+        </div>
+      </section>
+
+      <section class="logo">
+        <div class="container">
+          <div class="logo_image">
+            <div class="balloon_top" id="banner_logo_01">
+              <div class="balloon"><span></span>1</div>
+            </div>
+            <img src="img/baneer_logo.png" alt="バナーロゴ" />
+          </div>
+          <div class="logo_image">
+            <div class="balloon_left" id="banner_logo_02">
+              <div class="balloon"><span class="triangle_r"></span>2</div>
+            </div>
+            <div class="balloon_right">
+              <div class="balloon"><span class="triangle_l"></span>3</div>
+            </div>
+            <img src="img/banner_logomark.png" alt="バナーのロゴマーク" />
+          </div>
+          <h3>バナーロゴ</h3>
+          <p>制作時間:企画30分、デザイン1時間</p>
+          <ol>
+            <li class="num_01">
+              リノベーションした家から「木陰に建つ家」というイメージで、このようなデザインにしました。
+            </li>
+            <li class="num_02">
+              木造リノベーションの会社ということで「R」の文字を「樹」に見立てて加工しました。
+            </li>
+            <li class="num_03">
+              「木材のぬくもりを感じ取れる家」というコンセプトを設定し、オレンジ色を使用しました。
+            </li>
+          </ol>
+          <p>
+            ロゴタイプの文字は丸ゴシックのフォントを使い、文字色は「R」の幹と同じ色としました。
+          </p>
+        </div>
+      </section>
+
+      <section class="logo">
+        <div class="container">
+          <div class="logo_image">
+            <div class="balloon_top" id="koi_logo_01">
+              <div class="balloon"><span></span>1</div>
+            </div>
+            <img src="img/koi_logo.png" alt="ギャラリーサイトのロゴ" />
+            <img
+              id="koi_logomark"
+              src="img/koi_logomark.png"
+              alt="ギャラリーサイトのロゴマーク"
+            />
+          </div>
+          <h3>ギャラリーサイトのロゴ</h3>
+          <p>制作時間:企画1時間、デザイン3時間</p>
+          <ol>
+            <li class="num_01">
+              実物のがま口をトレースして作成したロゴマークです。
+            </li>
+          </ol>
+          <p>
+            黒い縁取り線をなくし、ロゴタイプと合うよう、色をピンクで統一しました。<br />
+            ロゴタイプの文字については、
+            <a href="fonts.html" id="logo_link">Fontsのページ</a>
+            をご覧ください。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#" id="page-top">TOP</a>
+      <small>&copy; AKIKO ASAYAMA 2022</small>
+    </footer>
+  </body>
+</html>

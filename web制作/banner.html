@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKIKO ASAYAMA</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        var pagetop = $("#page-top");
+        pagetop.hide();
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            pagetop.fadeIn();
+          } else {
+            pagetop.fadeOut();
+          }
+        });
+        pagetop.click(function () {
+          $("body, html").animate(
+            {
+              scrollTop: 0,
+            },
+            500
+          );
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img src="img/logo.png" alt="ロゴ" />
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav_lists">
+          <li class="nav_list"><a href="index.html#about">About</a></li>
+          <li class="nav_list">
+            <a href="#">
+              Works
+              <ul class="dropdown_lists">
+                <li class="dropdown_list">
+                  <a href="website.html">Website</a>
+                </li>
+                <li class="dropdown_list"><a href="banner.html">Banner</a></li>
+                <li class="dropdown_list"><a href="logo.html">Logo</a></li>
+                <li class="dropdown_list"><a href="fonts.html">Fonts</a></li>
+                <li class="dropdown_list"><a href="flyer.html">Flyer</a></li>
+              </ul>
+            </a>
+          </li>
+          <li class="nav_list"><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="sub_visual">
+        <h2>Works<span>Banner</span></h2>
+      </div>
+      <section class="banner">
+        <div class="container">
+          <img src="img/banner1_1.jpg" alt="プログラミングスクールの生徒募集" />
+          <img src="img/banner1_2.png" alt="プログラミングスクールの生徒募集" />
+          <div class="clear"></div>
+          <h3>プログラミングスクールの生徒募集</h3>
+          <p>制作時間:デザイン5時間</p>
+          <dl>
+            <dt>【依頼内容】</dt>
+            <dd>
+              <ul>
+                <li>20~30代の転職を考えている若者がターゲット</li>
+                <li>手軽に体験できるよう明るくポップな印象に</li>
+                <li>手書き文字を使ってほしい！</li>
+                <li>配色はパステルカラーで柔らかい雰囲気で</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>【提案したこと】</dt>
+            <dd>
+              文字サイズを5段階に分けてメリハリをつけた。<br />
+              パターン１では背景の写真をぼかすことで、柔らかい雰囲気を表現した。<br />
+              パターン２では、ポップな配色を使用して、柔らかい雰囲気を表現した。<br />
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="container">
+          <img src="img/banner2_1.jpg" alt="土地活用オンライン個別相談会" />
+          <img src="img/banner2_2.jpg" alt="土地活用オンライン個別相談会" />
+          <div class="clear"></div>
+          <h3>土地活用オンライン個別相談会</h3>
+          <p>制作時間:デザイン5時間</p>
+          <dl>
+            <dt>【依頼内容】</dt>
+            <dd>
+              <ul>
+                <li>サービスの利用満足度が高い部分をアピールしたい</li>
+                <li>信頼が伝わるように青系で文字は明朝体が良い</li>
+                <li>オンラインで気軽に相談できる雰囲気</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>【提案したこと】</dt>
+            <dd>
+              パターン1では幾何学的な背景を使用することで、土地や住宅を連想できるようにした。<br />
+              パターン2では利用満足度を大きく表示したり、青一色で視認性を上げたりする工夫をした。
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="container">
+          <img
+            src="img/banner3_1.jpg"
+            alt="リノベーションのショールーム見学会"
+          />
+          <img
+            src="img/banner3_2.jpg"
+            alt="リノベーションのショールーム見学会"
+          />
+          <div class="clear"></div>
+          <h3>リノベーションのショールーム見学会</h3>
+          <p>制作時間:デザイン4時間</p>
+          <dl>
+            <dt>【依頼内容】</dt>
+            <dd>
+              <ul>
+                <li>木や自然が好きな人に好まれるナチュラルな雰囲気で</li>
+                <li>「自然と暮らす」は縦書きでの記載希望</li>
+                <li>アースカラーにしてほしい。でも暗くはしたくない</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>【提案したこと】</dt>
+            <dd>
+              パターン1はお洒落な寝室をシンプルな図形だけで表現しました。<br />
+              パターン2はナチュラルティストを意識して木造のリビングを曲線や丸を多めに使って表現しました。<br />
+              依頼内容とは別にロゴもデザインしました。詳細はロゴのページで。
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="container">
+          <img src="img/banner4_1.jpg" alt="クレンジングオイルの新商品PR" />
+          <img src="img/banner4_2.jpg" alt="クレンジングオイルの新商品PR" />
+          <div class="clear"></div>
+          <h3>クレンジングオイルの新商品PR</h3>
+          <p>制作時間:1デザイン4時間</p>
+          <dl>
+            <dt>【依頼内容】</dt>
+            <dd>
+              <ul>
+                <li>白をベースにナチュラルで女性が好む雰囲気</li>
+                <li>5種類のオイルを図解で配置して欲しい</li>
+                <li>女性の顔よりも商品画像を目立たせて欲しい</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>【提案したこと】</dt>
+            <dd>
+              2作品とも洗浄力をアピールするために、水面や水しぶきを使ったデザインにしました。<br />
+              その中の成分として水滴を使って5種類のオイルを表現しました。<br />
+              パターン1はオイルカラーに近い配色をし、オイリーな感じを出しました。<br />
+              パターン2は反対色の水色を使い、洗い立ての爽やかさを表現しました。
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="container">
+          <img src="img/banner5.jpg" alt="専門学校のオープンキャンパス案内" />
+          <div class="clear"></div>
+          <h3>専門学校のオープンキャンパス案内</h3>
+          <p>制作時間:デザイン6時間</p>
+          <dl>
+            <dt>【依頼内容】</dt>
+            <dd>
+              <ul>
+                <li>10代が好むポップな雰囲気をアメコミ風に</li>
+                <li>配色はカラフルで鮮やかな色に</li>
+                <li>事前予約が必要であることを知らせたい</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>【提案したこと】</dt>
+            <dd>
+              アメコミ風にというご要望に対し、漫画のコマ割りを背景に使いました。<br />
+              それぞれのコマから各要素をはみ出すように配置することで動きのあるデザインに仕上げました。<br />
+              この課題では１パターンしか作成できず残念でした。また、人物写真は日本人ではなかった点や、<br />
+              左寄りになってしまった点も改善したいところだと思いました。
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="container">
+          <img src="img/banner6.jpg" alt="観光バスのツアー参加募集" />
+          <div class="clear"></div>
+          <h3>観光バスのツアー参加募集</h3>
+          <p>制作時間:デザイン3時間</p>
+          <dl>
+            <dt>【依頼内容】</dt>
+            <dd>
+              <ul>
+                <li>紅葉の魅力が伝わるように秋を演出して欲しい</li>
+                <li>京都の街やお寺などの写真を使って欲しい</li>
+                <li>和の印象が伝わるような歴史的な雰囲気</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>【提案したこと】</dt>
+            <dd>
+              紅葉の魅力が伝わる写真を選んだ結果、室内から覗く庭園という構図のものとなりました。<br />
+              そこに和柄を配置し、文字を縦書きにすることで、歴史的な雰囲気を出しました。<br />
+              しかし、京都の街やお寺というご要望に対し、この写真は分かりにくいものとなり残念に思いました。<br />
+              また、バス会社の社名を上手く配置できませんでした。
+            </dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#" id="page-top">TOP</a>
+      <small>&copy; AKIKO ASAYAMA 2022</small>
+    </footer>
+  </body>
+</html>

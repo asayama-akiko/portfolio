@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKIKO ASAYAMA</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/destyle.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      var pagetop = $("#page-top");
+      pagetop.hide();
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      pagetop.click(function () {
+        $("body, html").animate(
+          {
+            scrollTop: 0,
+          },
+          500
+        );
+        return false;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="index.html">
+        <img src="img/logo.png" alt="ロゴ" />
+      </a>
+    </h1>
+    <nav>
+      <ul class="nav_lists">
+        <li class="nav_list"><a href="index.html#about">About</a></li>
+        <li class="nav_list">
+          <a href="#">
+            Works
+            <ul class="dropdown_lists">
+              <li class="dropdown_list">
+                <a href="website.html">Website</a>
+              </li>
+              <li class="dropdown_list"><a href="banner.html">Banner</a></li>
+              <li class="dropdown_list"><a href="logo.html">Logo</a></li>
+              <li class="dropdown_list"><a href="fonts.html">Fonts</a></li>
+              <li class="dropdown_list"><a href="flyer.html">Flyer</a></li>
+            </ul>
+          </a>
+        </li>
+        <li class="nav_list"><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="sub_visual">
+      <h2>Works<span>Website</span></h2>
+    </div>
+
+    <section class="website">
+      <div class="container">
+        <a href="https://portfolio.dc-itex.com/hachioji/0002/asayama_home/" target="_blank">
+          <img src="img/asayama.png" alt="アサヤマホーム" />
+        </a>
+        <h3>
+          <a href="https://portfolio.dc-itex.com/hachioji/0002/asayama_home/">アサヤマホーム</a>
+        </h3>
+        <p>制作時間:企画10時間、デザイン10時間、コーディング15時間</p>
+        <p>
+          Ai、Ps、jQueryを学習した後に初めて架空のコーポレートサイトを自主制作しました。<br />
+          デザインからコーディングまで一人で取り組みました。レスポンシブ対応なし。
+        </p>
+        <dl>
+          <dt>ターゲット:</dt>
+          <dd>
+            30代男性、既婚。年収400万円、土地付き一戸建ての購入を考えている。<br />
+            首都圏に在住し、通期時間は1時間以内を希望している。予算は2000万円台。
+          </dd>
+          <dt>コンバージョン①:</dt>
+          <dd>
+            住宅展示場に来場してもらい、アサヤマホームのことを知ってもらう。
+          </dd>
+          <dt>コンバージョン②:</dt>
+          <dd>
+            カタログ請求をしてもらい、アサヤマホームのことを検討してもらう。
+          </dd>
+          <dt>最終コンバージョン:</dt>
+          <dd>見積りの依頼を受け、新規契約してもらう。</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="website">
+      <div class="container">
+        <a href="https://portfolio.dc-itex.com/hachioji/0002/self_introduction/" target="_blank">
+          <img src="img/self_introduction.jpeg" alt="自己紹介サイト" />
+        </a>
+        <h3>
+          <a href="https://portfolio.dc-itex.com/hachioji/0002/self_introduction/">自己紹介サイト</a>
+        </h3>
+        <p>制作時間:コーディング10時間</p>
+        <p>
+          HTML5、CSS3、JavaScriptの基礎学習を終えた後に作成した「自己紹介サイト」です。<br />
+          この課題では、初めてJavaScriptを実装しました。<br />
+          PC版の他に、レスポンシブ対応として、TL版とSP版も作成しました。<br />
+          応用として、画像ギャラリーの画像をマウスホバーするとタイトルが表示されるようにしました。<br />
+          また、SP版にはハンバーガーメニューを実装しました。
+        </p>
+      </div>
+    </section>
+
+    <section class="website">
+      <div class="container">
+        <a href="https://portfolio.dc-itex.com/hachioji/0002/joybeads/" target="_blank">
+          <img src="img/joybeads.jpeg" alt="JoyBeads告知サイト" />
+        </a>
+        <h3>
+          <a href="https://portfolio.dc-itex.com/hachioji/0002/joybeads/">JoyBeads告知サイト</a>
+        </h3>
+        <p>制作時間:企画15時間、デザイン15時間、コーディング15時間</p>
+        <p>
+          Web業界の動向に合わせてLPのスキルも必要と思い、このような自主制作に取り組んでみました。<br />
+          私の趣味であるアイロンビーズを活かした告知サイトとなっております。<br />
+          XDの練習としてデザインを一から考えてコーディングまでを一人でやりました。<br />
+          レスポンシブ対応なし。
+        </p>
+        <dl>
+          <dt>ターゲット：</dt>
+          <dd>20、30代女性とそのお子さん。</dd>
+          <dt>ストーリー：</dt>
+          <dd>
+            とある架空のおもちゃ会社がハロウィンイベントとして主商品であるJoyBeads（ジョイビーズ）を使ったワークショップを開催。
+            一方、お子さんの情操教育に関心の高いお母さんが子供の習い事として何かないと検索したところ、この告知サイトに出会う。
+          </dd>
+          <dt>コンセプト：</dt>
+          <dd>
+            ターゲット層を考慮してハロウィンらしい演出と楽しい雰囲気のWebサイトを心がけた。<br />
+            セクションごとに来場を促す申込みボタンを配置し、コンバージョンの達成に結びつくようにデザインした。<br />
+          </dd>
+          <dt>コンバージョン①：</dt>
+          <dd>JoyBeadsの存在を知ってもらう。</dd>
+          <dt>コンバージョン②：</dt>
+          <dd>イベントのことを知ってもらい、参加の申込みをしてもらう。</dd>
+          <dt>最終コンバージョン：</dt>
+          <dd>JoyBeadsの宣伝になる。</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="website">
+      <div class="container" id="gallery_site">
+        <a href="https://portfolio.dc-itex.com/hachioji/0002/koigoromo/" target="_blank">
+          <img src="img/koigoromo.jpeg" alt="ギャラリーサイト（受注案件）" />
+        </a>
+        <h3>
+          <a href="https://portfolio.dc-itex.com/hachioji/0002/koigoromo/
+          ">ギャラリーサイト（受注案件）</a>
+        </h3>
+        <p>制作時間:企画2時間、デザイン2時間、コーディング10時間</p>
+        <dl>
+          <dt>【依頼内容】</dt>
+          <dd>
+            <ol>
+              <li>和モダンで可愛いギャラリーサイトを作ってほしい</li>
+              <li>20代の女性が好む雰囲気にしてほしい</li>
+              <li>メインカラーは和色の黄色にしてほしい</li>
+              <li>Webサイトの中に和柄を使ってほしい</li>
+              <li>えんじ色のロゴを一から作ってほしい</li>
+              <li>大正ロマン風のフォントを部分的に使ってほしい</li>
+            </ol>
+          </dd>
+        </dl>
+        <dl>
+          <dt>【提案したこと】</dt>
+          <dd>
+            <ol>
+              <li>ローディングページを作ることで、離脱率を下げる</li>
+              <li>20代女性にささるような動きのあるサイトにする</li>
+              <li>
+                ベースカラーは白色、メインカラーは刈安色、アクセントカラーはこげ茶にする
+              </li>
+              <li>ロゴの色はえんじ色寄りのピンクにする</li>
+              <li>作品にスライドを付ける</li>
+            </ol>
+          </dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" id="page-top">TOP</a>
+    <small>&copy; AKIKO ASAYAMA 2022</small>
+  </footer>
+</body>
+
+</html>

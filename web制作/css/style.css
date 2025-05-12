@@ -1,0 +1,827 @@
+@charset "uft-8";
+
+/*****************************************
+ * ページ全体に関わるCSSの設定
+ ****************************************/
+
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10px */
+}
+
+body {
+  font-family: "Meiryo", serif, sans-serif;
+  /* font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Meiryo', sans-serif; */
+  font-weight: 400;
+  /* レギュラーウェイトを指定 */
+  font-size: 1.4rem;
+  /* <p>に合わせて14px */
+  line-height: 1.5;
+  color: #666;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #666;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.clear {
+  clear: both;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 65px 0;
+}
+
+/*****************************************
+ * 共通設定
+ ****************************************/
+
+/* ヘッダー */
+header {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+header h1 img {
+  width: auto;
+  height: 60px;
+}
+
+.nav_lists {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_list {
+  position: relative;
+  padding: 5px 30px;
+}
+
+.nav_list:hover {
+  border-bottom: 2px solid #666;
+}
+
+/* ドロップダウンメニュー */
+.dropdown_lists {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 36px;
+  left: 0;
+}
+
+.nav_list:hover .dropdown_lists {
+  display: block;
+}
+
+.dropdown_list {
+  background-color: #b8e2de;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.dropdown_list:hover {
+  background-color: #666;
+}
+
+.dropdown_list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+/* フッター */
+#page-top {
+  position: fixed;
+  right: 65px;
+  bottom: 100px;
+  height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(90deg);
+  font-size: 90%;
+  line-height: 1.5rem;
+  color: #666;
+  padding: 0 0 0 35px;
+  border-top: solid 1px;
+}
+#page-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 15px;
+  border-top: solid 1px;
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+
+footer {
+  background-color: #666;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 26px;
+}
+
+small {
+  font-size: 1.4rem;
+}
+
+/*****************************************
+ * index.html
+ ****************************************/
+
+/* メインエリア */
+/* fv */
+.fv {
+  height: 500px;
+  background-image: url(../img/fv.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.fv h1 {
+  font-family: "Noto Serif JP";
+  font-size: 4rem;
+  padding-top: 87px;
+  text-align: left;
+}
+
+.fv h1 span {
+  display: block;
+  margin-left: 2.2rem;
+}
+
+/* About */
+#about,
+#works,
+#contact {
+  text-align: center;
+}
+.container h2 {
+  font-size: 3.2rem;
+  padding-bottom: 70px;
+}
+
+.me {
+  border-radius: 50%;
+  border: 5px solid #b8e2de;
+  margin-bottom: 20px;
+}
+
+#about p {
+  margin-bottom: 94px;
+}
+
+.profile {
+  text-align: left;
+}
+
+.profile dl {
+  max-width: 793px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile dt {
+  font-weight: 400;
+  width: 20%;
+  margin-bottom: 40px;
+  position: relative;
+  top: 0;
+  left: 1em;
+}
+.profile dt::before {
+  content: "";
+  display: inline-block;
+  background-color: #b8e2de;
+  width: 12px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: -1em;
+}
+.profile dd {
+  width: 76%;
+  margin-bottom: 40px;
+}
+
+.skill {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.skill img {
+  display: block;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+/* Works */
+.bg-color {
+  background-color: #def1ef;
+}
+
+.works {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12.5px;
+}
+
+.work_detail {
+  position: relative;
+  width: 275px;
+  height: 210px;
+  object-fit: cover;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+
+.work_detail:nth-child(3n) {
+  margin-right: 0;
+}
+
+.work_menu {
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-size: 3.2rem;
+  line-height: 210px;
+}
+
+.work_hov {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.work_hov:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.fonts_img {
+  display: block;
+  padding: 30% 0;
+}
+
+/*****************************************
+ * website.html
+ ****************************************/
+/* sub_visual */
+.sub_visual {
+  background-color: #def1ef;
+  padding: 65px 5%;
+  text-align: center;
+}
+
+.sub_visual h2 {
+  font-size: 3.2rem;
+}
+
+.sub_visual h2 span {
+  display: block;
+  font-size: 2.4rem;
+  margin-top: 40px;
+}
+
+/* section共通 */
+section:nth-of-type(even) {
+  background-color: #def1ef;
+}
+
+.website img {
+  border: 1px solid #666;
+  object-fit: cover;
+}
+
+section h3 {
+  margin-top: 50px;
+  margin-bottom: 14px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+section h3 a {
+  font-size: 2rem;
+}
+
+section p {
+  margin-bottom: 46px;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+.website dl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 46px;
+}
+
+.website dl:last-of-type {
+  margin-bottom: 0;
+}
+
+.website dt {
+  width: 25%;
+  font-weight: normal;
+}
+
+.website dd {
+  width: 75%;
+  margin-bottom: 14px;
+}
+
+.website dd:last-child {
+  margin-bottom: 0;
+}
+
+.website dd ol {
+  list-style-type: disc;
+}
+
+.website dd li {
+  margin-bottom: 14px;
+}
+
+.website dd li:last-of-type {
+  margin-bottom: 0;
+}
+
+/* gallery_site */
+#gallery_site dt {
+  margin-left: -0.5em;
+}
+/*****************************************
+ * banner.html
+ ****************************************/
+.banner img {
+  float: left;
+  display: block;
+  margin-right: 30px;
+}
+
+.banner img:last-of-type {
+  margin-right: 0;
+}
+
+.banner dl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.banner dt {
+  width: 18%;
+  font-weight: normal;
+  margin-left: -0.5em;
+}
+
+.banner dd {
+  width: 82%;
+}
+
+.banner dl:last-child {
+  margin-bottom: 0;
+}
+
+.banner dd ul {
+  list-style-type: disc;
+  margin-left: 1.2em;
+}
+
+/*****************************************
+ * logo.html
+ ****************************************/
+/* 共通 */
+.logo h3,
+.fonts h3,
+.flyer h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#joybeads_logo {
+  padding-top: 68px;
+}
+/* 画僧と吹き出し */
+.logo_image {
+  display: block;
+  width: 218px;
+  height: auto;
+  object-fit: cover;
+  margin: 70px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.balloon_top {
+  display: block;
+  position: absolute;
+  top: -70px;
+  left: 42%;
+}
+
+.balloon_left {
+  display: inline-block;
+  position: absolute;
+  top: 42%;
+  left: -65px;
+}
+
+.balloon_right {
+  display: inline-block;
+  position: absolute;
+  top: 42%;
+  right: -65px;
+}
+
+.balloon_bottom {
+  display: block;
+  position: absolute;
+  bottom: -70px;
+  left: 12%;
+}
+
+.balloon {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.balloon span {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #b8e2de;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  z-index: -1;
+}
+
+.balloon span::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #b8e2de;
+}
+
+.triangle_r {
+  transform: rotate(-90deg);
+}
+
+.triangle_l {
+  transform: rotate(90deg);
+}
+
+.triangle_t {
+  transform: rotate(180deg);
+}
+
+/* リスト */
+.logo ol,
+.fonts ol {
+  counter-reset: number; /*数字をリセット*/
+  list-style-type: none !important; /*数字を一旦消す*/
+  margin: 50px 0;
+}
+.logo ol li,
+.fonts ol li {
+  position: relative;
+  margin-left: 60px;
+  margin-bottom: 14px;
+  line-height: 45px;
+}
+.logo ol li:last-of-type,
+.fonts ol li:last-of-type {
+  margin-bottom: 0;
+}
+
+.logo ol li:before,
+.fonts ol li::before {
+  /* 以下数字をつける */
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  /*以下数字のデザイン変える*/
+  display: inline-block;
+  background: #b8e2de;
+  color: #666;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  left: -60px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  /*以下 上下中央寄せのため*/
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* asayama_logo */
+#asayama_logo {
+  top: -65px;
+  left: 24%;
+}
+
+/* joybeads_logo */
+#joybeads_logo_01 {
+  left: 20%;
+}
+
+#joybeads_logo_03 {
+  left: 80%;
+}
+
+/* banner_logo */
+#banner_logo_01 {
+  left: 10%;
+}
+
+/* koi_logo_01 */
+#koi_logo_01 {
+  left: 20%;
+}
+
+#koi_logomark {
+  width: 50%;
+  margin-top: 40px;
+}
+
+/* link */
+.logo p #logo_link {
+  text-decoration-line: underline;
+}
+
+/*****************************************
+ * fonts.html
+ ****************************************/
+.fonts .logo_image:last-of-type {
+  margin-top: 140px;
+}
+
+#koi_logo_01 {
+  left: 47%;
+}
+
+#koi_logo_02 {
+  top: 72%;
+}
+
+#koi_logo_03 {
+  top: 45%;
+}
+
+#koi_logomark_01 {
+  left: 52%;
+}
+
+#koi_logomark_02 {
+  top: 0;
+}
+
+/*****************************************
+ * flyer.html
+ ****************************************/
+.flyer img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*****************************************
+ * TL
+ ****************************************/
+@media screen and (max-width: 900px) {
+  /*****************************************
+ * 共通設定
+ ****************************************/
+  .container {
+    padding: 65px 12px;
+  }
+
+  /* ドロップダウンメニュー */
+  .dropdown_lists {
+    width: 300px;
+    left: -90%;
+  }
+
+  /* フッター */
+  #page-top {
+    opacity: 0;
+  }
+  /*****************************************
+ * index.html
+ ****************************************/
+  /* メインエリア */
+  /* About */
+  .profile {
+    padding: 0;
+  }
+
+  .profile dt {
+    margin-right: 10px;
+  }
+
+  /* Works */
+  .work {
+    max-width: 575px;
+    margin: 0 auto;
+  }
+
+  .work_detail:nth-child(3n) {
+    margin-right: 25px;
+  }
+
+  .work_detail:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+/*****************************************
+ * SP
+ ****************************************/
+@media screen and (max-width: 654px) {
+  /*****************************************
+ * 共通設定
+ ****************************************/
+  /* ヘッダー */
+  header {
+    height: 200px;
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  /*****************************************
+ * index.html
+ ****************************************/
+  /* メインエリア */
+  /* fv */
+  .fv h1 {
+    font-size: 3.2rem;
+    margin-top: -37px;
+    padding-top: 0;
+    color: #fff;
+  }
+
+  .fv h1 span {
+    margin-left: 1.8rem;
+  }
+
+  /* Works */
+  .work {
+    max-width: 275px;
+    margin: 0 auto;
+  }
+
+  .work_detail {
+    margin-right: 0;
+  }
+
+  .work_detail:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  /*****************************************
+ * website.html
+ ****************************************/
+  .website dl {
+    flex-direction: column;
+  }
+
+  .website dt,
+  .banner dt {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .website dd,
+  .banner dd {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  #gallery_site dd {
+    width: 90%;
+    margin-left: 1.3em;
+  }
+
+  #gallery_site dd li,
+  .banner dd li {
+    margin-bottom: 14px;
+  }
+
+  #gallery_site dd li:last-of-type,
+  .banner dd li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /*****************************************
+ * banner.html
+ ****************************************/
+  .banner img {
+    /* display: block; */
+    float: none;
+    margin: 0 auto 30px;
+    /* clear: both; */
+  }
+  .banner img:last-of-type {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .banner dl {
+    flex-direction: column;
+  }
+
+  /*****************************************
+ * logo.html
+ ****************************************/
+  /* 画僧と吹き出し */
+  .logo_image {
+    width: 174px;
+    margin-top: 50px;
+  }
+
+  .balloon_top {
+    top: -50px;
+  }
+
+  .balloon_left {
+    left: -45px;
+  }
+  .balloon_right {
+    right: -45px;
+  }
+  .balloon_bottom {
+    bottom: -50px;
+  }
+
+  /* リスト */
+  .logo ol li,
+  .fonts ol li {
+    line-height: 1.3;
+  }
+
+  .logo ol li,
+  .fonts ol li {
+    margin-bottom: 30px;
+  }
+}
