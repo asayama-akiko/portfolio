@@ -1,0 +1,118 @@
+@charset "uft-8";
+
+/*****************************************
+ * CSSのリセット
+ ****************************************/
+
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+div,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*****************************************
+ * ページ全体に関わるCSSの設定
+ ****************************************/
+
+html {
+    font-size: 62.5%;
+    /* 10px */
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Meiryo', sans-serif;
+    font-weight: 400;
+    /* レギュラーウェイトを指定 */
+    font-size: 1.6rem;
+    /* <p>に合わせて16px */
+    line-height: 1.5;
+    color: #2b2a27;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+strong {
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    color: #2b2a27;
+}
+
+
+/*****************************************
+ * タイマー
+ ****************************************/
+
+.timer {
+    width: 350px;
+    height: 200px;
+    background-color: #858180;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background: -moz-linear-gradient(top left, #858180, #080808);
+    background: -webkit-linear-gradient(top left, #858180, #080808);
+    background: linear-gradient(to bottom right, #858180, #080808);
+}
+
+.display {
+    width: 300px;
+    height: 120px;
+    line-height: 120px;
+    background-color: #d3d3d3;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid #000;
+    /* font-size: 80px; */
+}
+
+#cd_sec {
+    width: 89.9px;
+    text-align: left;
+}
+
+.time_display {
+    display: inline-block;
+    color: black;
+    font-size: 80px;
+}
+
+#cd_min.message_display {
+    display: none;
+}
+
+#cd_sec.message_display {
+    /*    display: inline; ↓width設定を外す場合は、インライン要素化にしても良い*/
+    width: 260px;
+    color: red;
+    font-size: 60px;
+}

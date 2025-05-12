@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ead518;
+}
+
+body {
+  background: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  padding: 40px;
+  max-width: 600px;
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+}
+.saikoro {
+  text-align: center;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.saikoro-headline {
+  margin: 0 0 80px;
+  font-size: 30px;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+
+.saikoro-headline::after {
+  content: "～サイコロを振って決めよう！～";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  color: #333;
+  font-size: 20px;
+  padding: 10px 10px 10px 0;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(10deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.saikoro-result {
+  margin-bottom: 30px;
+  animation: shake 2.5s 2s ease-in-out 2;
+}
+
+.saikoro-result img {
+  width: auto;
+  height: 300px;
+}
+
+.saikoro-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  border: 10px double #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.saikoro-button:hover {
+  background: #fff;
+  color: #333;
+  border-color: #333;
+}

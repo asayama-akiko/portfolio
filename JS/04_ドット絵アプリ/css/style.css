@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+canvas {
+  display: block;
+  border: 1px solid #cdcccc;
+}
+
+.palette {
+  display: flex;
+}
+.color {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #cdcccc;
+}
