@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_ルーレット</title>
+    <link rel="stylesheet" href="./roulette.css" />
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        generateTable();
+        $("#start").click(count_start);
+        $("#stop").click(count_stop);
+        $("#reset").click(count_reset);
+      });
+
+      // テーブルを生成する関数
+      function generateTable() {
+        for (let j = 0; j < 4; j++) {
+          const $tr = $("<tr></tr>");
+          for (let i = 1; i <= 4; i++) {
+            $tr.append("<td>" + (j * 4 + i) + "</td>");
+          }
+          $("#roulette").append($tr);
+        }
+      }
+
+      // 変数定義
+      let start_f = false;
+      let interval;
+      let array = Array.from({ length: 16 }, (_, i) => i);
+      let index;
+
+      function count_start() {
+        if (!start_f) {
+          interval = setInterval(count_down, 50);
+          start_f = true;
+        } else {
+          clearInterval(interval);
+          start_f = false;
+        }
+        $(".fixed").removeClass("fixed").addClass("normal");
+      }
+
+      function count_down() {
+        index = Math.floor(Math.random() * array.length);
+        $("td").removeClass("selected");
+        $("td").eq(array[index]).addClass("selected");
+      }
+
+      function count_stop() {
+        if (start_f) {
+          clearInterval(interval);
+          $("td.selected").addClass("fixed");
+          array.splice(index, 1);
+          start_f = false;
+        }
+      }
+
+      function count_reset() {
+        clearInterval(interval);
+        $("td").removeClass();
+        array = Array.from({ length: 16 }, (_, i) => i);
+        start_f = false;
+      }
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <table id="roulette"></table>
+      <div id="buttons">
+        <button id="start">スタート</button>
+        <button id="stop">ストップ</button>
+        <button id="reset">リセット</button>
+      </div>
+    </main>
+  </body>
+</html>

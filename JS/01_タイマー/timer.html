@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_タイマー</title>
+    <link rel="stylesheet" href="./timer.css" />
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#start").click(count_start);
+        $("#stop").click(count_stop);
+        $("#reset").click(count_reset);
+        count_reset();
+      });
+
+      const INITIAL_COUNT = 180;
+      let count = INITIAL_COUNT;
+      let interval = null;
+      let start_f = false;
+
+      function count_start() {
+        if (!start_f) {
+          interval = setInterval(count_down, 1000);
+          start_f = true;
+        }
+      }
+
+      function count_down() {
+        if (count <= 0) {
+          $("#cd_min").text("");
+          $("#cd_sec").text("TIME UP!").addClass("message_display");
+          clearInterval(interval);
+          start_f = false;
+        } else {
+          count--;
+          const min = String(Math.floor(count / 60)).padStart(2, "0");
+          const sec = String(count % 60).padStart(2, "0");
+          $("#cd_min")
+            .text(min + ":")
+            .removeClass("message_display");
+          $("#cd_sec").text(sec).removeClass("message_display");
+        }
+      }
+
+      function count_stop() {
+        clearInterval(interval);
+        start_f = false;
+      }
+
+      function count_reset() {
+        count = INITIAL_COUNT;
+        const min = String(Math.floor(count / 60)).padStart(2, "0");
+        const sec = String(count % 60).padStart(2, "0");
+        $("#cd_min")
+          .text(min + ":")
+          .removeClass("message_display");
+        $("#cd_sec").text(sec).removeClass("message_display");
+        clearInterval(interval);
+        start_f = false;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="timer">
+      <div class="display">
+        <span id="cd_min" class="time_display"></span>
+        <span id="cd_sec" class="time_display"></span>
+      </div>
+      <button id="start">スタート</button>
+      <button id="stop">ストップ</button>
+      <button id="reset">リセット</button>
+    </div>
+  </body>
+</html>
