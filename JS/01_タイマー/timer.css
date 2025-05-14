@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+div,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #2b2a27;
+  margin: 0 auto;
+}
+
+.timer {
+  width: 350px;
+  height: 200px;
+  background-color: #858180;
+  margin: 20px auto;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #858180, #080808);
+}
+
+.display {
+  width: 300px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #d3d3d3;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+.time_display {
+  display: inline-block;
+  font-size: 80px;
+}
+.message_display {
+  color: red;
+  font-size: 60px;
+}
